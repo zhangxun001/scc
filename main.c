@@ -50,7 +50,8 @@ int read(const char *file, char *buf, size_t buf_size)
 
 int compile(scc_state *s)
 {
-    dev_dbg("%s", s->src_file_buf);
+    // dev_dbg("%s", s->src_file_buf);
+    lexer(s);
     return OK;
 }
 
