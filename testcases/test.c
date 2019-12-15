@@ -1,4 +1,4 @@
-#include "for_gcc_build.h" // only for gcc, TinyC will ignore it.
+#include "for_gcc_build.h" // for gcc build, tiny cc will ignore it
 
 int factor(int n) {
     if (n < 2) {

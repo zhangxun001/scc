@@ -7,19 +7,6 @@
 #define ERROR (-1)
 #define OK 0
 
-#define DEBUG_PRINT
-
-#ifdef DEBUG_PRINT
-    #define dev_err(...) do{fprintf(stderr, "err[%s, %d]: ", __func__, __LINE__); \
-                    fprintf(stderr, __VA_ARGS__);fprintf(stderr, "\n");} while(0)
-    #define dev_dbg(...) do{fprintf(stderr, "dbg[%s,%d]: ", __func__, __LINE__); \
-                    fprintf(stderr, __VA_ARGS__);fprintf(stderr, "\n");} while(0)
-#else
-    #define dev_err(...) do{fprintf(stderr, "[%s, %d]: ", __func__, __LINE__); \
-                    fprintf(stderr, __VA_ARGS__);fprintf(stderr, "\n");} while(0)
-    #define dev_dbg(...) do{}while(0)
-#endif
-
 #define FILE_BUF_SIZE (2 * 1024 * 1024)
 
 #define FREAD_NMEMB 1
